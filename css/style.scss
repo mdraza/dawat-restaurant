@@ -1,0 +1,329 @@
+@import url('https://fonts.googleapis.com/css?family=Dancing+Script:400,700|Lato:400,700|PT+Sans+Narrow:400,700');
+@import url('https://fonts.googleapis.com/css?family=Lato&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Dancing+Script&display=swap');
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    margin: 0 0 15px;
+    font-family: "PT Sans Narrow", sans-serif;
+    font-weight: 700;
+}
+
+html,
+body {
+    height: 100%
+}
+
+body {
+    color: #555555;
+    font-family: "Lato", sans-serif;
+    font-size: 15px;
+    font-weight: 400;
+    letter-spacing: 0.3px;
+    line-height: 1.7em;
+}
+
+a:hover {
+    text-decoration: none
+}
+
+.container-fluid {
+    width: 82%;
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+%navigation {
+    width: 100%;
+    left: 0;
+    padding: 0 160px;
+    box-sizing: border-box;
+    z-index: 999;
+}
+
+%logo {
+    float: left;
+    width: 20%;
+    height: 80px;
+    background-repeat: no-repeat;
+
+    @media (max-width:991px) {
+        width: 66%;
+    }
+}
+
+%nav-inner {
+    float: right;
+
+    @media (max-width:991px) {
+        position: absolute;
+        top: 70px;
+        left: -100%;
+        height: calc(100vh - 70px);
+        width: 100%;
+        background: rgb(255, 255, 255);
+        transition: 0.5s;
+
+        &.active {
+            left: 0;
+        }
+
+    }
+}
+
+%ul-content {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+    display: flex;
+
+    @media (max-width:991px) {
+        display: block;
+        text-align: center;
+        margin-top: 10%;
+    }
+
+    .btn {
+        margin-top: 12px;
+        color: #fff;
+        border: 1px solid;
+        height: 50px;
+        line-height: 34px;
+        margin-left: 19px;
+        padding: 6px 25px;
+        border-radius: 0;
+        background-color: #ca3d26;
+        border: 1px solid #ca3d26;
+    }
+}
+
+%a {
+    text-decoration: none;
+    display: block;
+    height: 70px;
+    line-height: 70px;
+    transition: 0.4s;
+    font-family: 'Lato', sans-serif;
+    letter-spacing: 2px;
+
+    &:hover {
+        text-decoration: none;
+        color: #ca3d26;
+    }
+
+    &.active {
+        color: #ca3d26;
+    }
+
+    @media (max-width:991px) {
+        color: #000000;
+    }
+}
+
+%menu-toggle {
+    float: right;
+    line-height: 70px;
+    font-size: 22px;
+    cursor: pointer;
+    display: none;
+
+    @media (max-width:991px) {
+        display: block;
+    }
+}
+
+.navigation {
+    position: absolute;
+    top: 15px;
+    background: transparent;
+    @extend %navigation;
+
+    @media (max-width:991px) {
+        padding: 0 20px;
+    }
+
+    .logo {
+        background-image: url('../images/main_logo.png');
+        @extend %logo;
+
+    }
+
+    nav {
+        @extend %nav-inner;
+
+        ul {
+            @extend %ul-content;
+
+            li {
+                a {
+                    color: #ffffff;
+                    @extend %a;
+                }
+
+                &:not(:last-child) a {
+                    padding: 0 20px;
+                }
+
+            }
+        }
+    }
+
+    .menu-toggle {
+        color: #ffffff;
+        @extend %menu-toggle;
+    }
+}
+
+.nav-scroll {
+    position: fixed;
+    top: 0;
+    background: #ffffff;
+    box-shadow: 1px 2px 15px gray;
+    @extend %navigation;
+
+    &::after {
+        background: url(../images/tri-promo-bottom-white.png) repeat scroll 0 0;
+        bottom: -7px;
+        content: "";
+        height: 7px;
+        left: 0;
+        opacity: 1;
+        position: absolute;
+        width: 100%;
+        transition: 0.5s;
+    }
+
+    @media (max-width:991px) {
+        padding: 0 20px;
+    }
+
+    .logo {
+        background-image: url('../images/main_logo_black.png');
+        margin-top: 10px;
+        @extend %logo;
+    }
+
+    nav {
+        margin-top: 12px;
+
+        ul {
+            li {
+                a {
+                    color: #1a1a1a;
+                }
+            }
+        }
+    }
+
+    .menu-toggle {
+        color: #000000;
+    }
+}
+
+.slider {
+    position: relative;
+    top: 0;
+    left: 0;
+    height: 100vh;
+
+    @media (max-width:991px) {
+        height: 37vh;
+    }
+
+    &::after {
+        background: #000 url('../images/pattarn.png') repeat;
+        content: "";
+        height: 100%;
+        left: 0;
+        opacity: 0.6;
+        position: absolute;
+        top: 0;
+        width: 100%;
+        z-index: 2;
+    }
+    .carousel-control-prev,.carousel-control-next{
+        z-index: 998;
+    }
+    .carousel-indicators {
+        .active {
+            opacity: 1;
+        }
+
+        li {
+            box-sizing: content-box;
+            flex: 0 1 auto;
+            width: 12px;
+            height: 12px;
+            margin-right: 3px;
+            margin-left: 3px;
+            text-indent: -999px;
+            cursor: pointer;
+            background-color: #fff;
+            background-clip: padding-box;
+            border-top: 10px solid transparent;
+            border-bottom: 10px solid transparent;
+            opacity: .5;
+            transition: opacity .6s ease;
+        }
+
+    }
+
+    .carousel-inner {
+        height: 100vh;
+
+        @media (max-width:991px) {
+            height: 37vh;
+        }
+
+        .carousel-item {
+            img {
+                width: 100%;
+
+            }
+
+            .carousel-caption {
+                position: absolute;
+                right: 15%;
+                top: 280px;
+                left: 15%;
+                z-index: 998;
+                color: #fff;
+                text-align: center;
+                bottom: none !important;
+                padding-top: 0;
+                padding-bottom: 0;
+                h2{
+                    font-size: 90px;
+                    font-family: 'Dancing Script', cursive;
+                }
+                p{
+                    font-size: 70px;
+                    text-transform: uppercase;
+                    font-family: 'PT Sans Narrow', sans-serif;
+                    margin-top: 50px;
+                    letter-spacing: 2.5px;
+                }
+                a{
+                    display: inline-block;
+                    padding: 10px 20px;
+                    border: 1px solid #fff;
+                    color: #fff;
+                    text-decoration: none;
+                    margin-top: 50px;
+                    letter-spacing: 5px;
+                }
+            }
+        }
+    }
+}
