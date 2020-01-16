@@ -18,6 +18,10 @@ h6 {
     font-weight: 700;
 }
 
+p {
+    color: #4a4d4f;
+}
+
 html,
 body {
     height: 100%
@@ -37,17 +41,28 @@ a:hover {
 }
 
 .container-fluid {
-    width: 82%;
+    width: 86%;
     padding-right: 15px;
     padding-left: 15px;
     margin-right: auto;
     margin-left: auto;
+
+    @media (max-width: 991px) {
+        width: 100%;
+        padding-right: 15px;
+        padding-left: 15px;
+        margin-right: auto;
+        margin-left: auto;
+    }
 }
 
+/*----------------------------------*/
+/*          Navigation
+/*----------------------------------*/
 %navigation {
     width: 100%;
     left: 0;
-    padding: 0 160px;
+    padding: 0 120px;
     box-sizing: border-box;
     z-index: 999;
 }
@@ -91,7 +106,7 @@ a:hover {
     @media (max-width:991px) {
         display: block;
         text-align: center;
-        margin-top: 10%;
+        margin-top: 5%;
     }
 
     .btn {
@@ -116,6 +131,16 @@ a:hover {
     transition: 0.4s;
     font-family: 'Lato', sans-serif;
     letter-spacing: 2px;
+
+    @media (max-width:991px) {
+        height: 48px;
+        line-height: 48px;
+    }
+
+    @media (min-width:768px) and (max-width:991px) {
+        height: 65px;
+        line-height: 40px;
+    }
 
     &:hover {
         text-decoration: none;
@@ -169,10 +194,14 @@ a:hover {
                 a {
                     color: #ffffff;
                     @extend %a;
+
+                    @media (max-width:991px) {
+                        color: #000;
+                    }
                 }
 
                 &:not(:last-child) a {
-                    padding: 0 20px;
+                    padding: 0 18px;
                 }
 
             }
@@ -185,6 +214,9 @@ a:hover {
     }
 }
 
+/*----------------------------------*/
+/*         Navigation Scroll
+/*----------------------------------*/
 .nav-scroll {
     position: fixed;
     top: 0;
@@ -231,6 +263,9 @@ a:hover {
     }
 }
 
+/*----------------------------------*/
+/*           Header Slider
+/*----------------------------------*/
 .slider {
     position: relative;
     top: 0;
@@ -238,7 +273,7 @@ a:hover {
     height: 100vh;
 
     @media (max-width:991px) {
-        height: 37vh;
+        height: 100vh;
     }
 
     &::after {
@@ -252,9 +287,29 @@ a:hover {
         width: 100%;
         z-index: 2;
     }
-    .carousel-control-prev,.carousel-control-next{
+
+
+
+    .carousel-control-prev,
+    .carousel-control-next {
         z-index: 998;
+        opacity: 0.8;
+        transition: 0.5s;
+
+        &:hover {
+            opacity: 1;
+        }
+
+        .fa {
+            background-color: #ca3d26;
+            padding: 15px;
+
+            @media (max-width:576px) {
+                background-color: transparent;
+            }
+        }
     }
+
     .carousel-indicators {
         .active {
             opacity: 1;
@@ -283,19 +338,20 @@ a:hover {
         height: 100vh;
 
         @media (max-width:991px) {
-            height: 37vh;
+            height: 100vh;
         }
 
         .carousel-item {
             img {
                 width: 100%;
+                height: 100vh;
 
             }
 
             .carousel-caption {
                 position: absolute;
                 right: 15%;
-                top: 280px;
+                top: 225px;
                 left: 15%;
                 z-index: 998;
                 color: #fff;
@@ -303,18 +359,49 @@ a:hover {
                 bottom: none !important;
                 padding-top: 0;
                 padding-bottom: 0;
-                h2{
+
+                @media (max-width:576px) {
+                    top: 200px;
+                }
+
+                @media (min-width:768px) and (max-width:991px) {
+                    top: 340px;
+                }
+
+                h2 {
                     font-size: 90px;
                     font-family: 'Dancing Script', cursive;
+
+                    @media (max-width:576px) {
+                        font-size: 38px;
+                    }
+
+                    @media (min-width:768px) and (max-width:991px) {
+                        font-size: 70px;
+                    }
                 }
-                p{
+
+                p {
                     font-size: 70px;
                     text-transform: uppercase;
                     font-family: 'PT Sans Narrow', sans-serif;
                     margin-top: 50px;
                     letter-spacing: 2.5px;
+                    color: #ffffff;
+
+                    @media (max-width:576px) {
+                        font-size: 30px;
+                        margin-top: 16px;
+                        line-height: 1.1;
+                    }
+
+                    @media (min-width:768px) and (max-width:991px) {
+                        font-size: 60px;
+                        line-height: 1;
+                    }
                 }
-                a{
+
+                a {
                     display: inline-block;
                     padding: 10px 20px;
                     border: 1px solid #fff;
@@ -322,8 +409,237 @@ a:hover {
                     text-decoration: none;
                     margin-top: 50px;
                     letter-spacing: 5px;
+                    transition: 0.5s;
+
+                    &:hover {
+                        background-color: #ca3d26;
+                        border: 1px solid #ca3d26;
+                    }
+
+                    @media (max-width:576px) {
+                        padding: 3px 10px;
+                        margin-top: 10px;
+                        letter-spacing: 3px;
+                        font-size: 11px;
+                    }
+
+                    @media (min-width:768px) and (max-width:991px) {
+                        padding: 15px 25px;
+                        font-size: 25px;
+                        border: 2px solid #fff;
+                    }
                 }
             }
         }
     }
+}
+
+/*----------------------------------*/
+/*         About Us Section
+/*----------------------------------*/
+%header-section {
+    h2 {
+        text-align: center;
+        font-family: "Dancing Script", cursive;
+        font-size: 70px;
+        color: #ca3d26;
+
+        @media (max-width: 576px) {
+            font-size: 50px;
+            margin-bottom: 0;
+        }
+
+        &::after {
+            background: rgba(0, 0, 0, 0) url(../images/red.png) no-repeat scroll center / contain;
+            width: 100%;
+            height: 30px;
+            content: "";
+            position: absolute;
+            top: 175px;
+            left: 0;
+
+            @media (max-width: 576px) {
+                height: 25px;
+                top: 155px;
+            }
+        }
+    }
+}
+#about {
+    padding: 90px 0;
+    background: rgba(0, 0, 0, 0) url(../images/home_three_about_bg.png) no-repeat scroll center bottom / contain;
+    position: relative;
+
+    &::before {
+        background: url(../images/tri-promo-bottom-white.png) repeat scroll 0 0;
+        top: -7px;
+        content: "";
+        height: 7px;
+        left: 0;
+        opacity: 1;
+        position: absolute;
+        width: 100%;
+        z-index: 9;
+        transform: rotateX(180deg);
+
+    }
+    &::after {
+        background: url(../images/tri-promo-bottom-white.png) repeat scroll 0 0;
+        bottom: -6px;
+        content: "";
+        height: 7px;
+        left: 0;
+        opacity: 1;
+        position: absolute;
+        width: 100%;
+        z-index: 9;
+        // transform: rotateX(180deg);
+
+    }
+
+    .header-txt {
+        @extend %header-section;
+    }
+
+    .about-txt {
+        padding: 65px 0;
+
+        p {
+            font-size: 17px;
+            letter-spacing: 0.5px;
+            line-height: 1.7;
+
+            .big-text {
+                float: left;
+                font-size: 85px;
+                font-weight: 700;
+                margin-bottom: -4px;
+                margin-right: 10px;
+                line-height: 1;
+            }
+        }
+    }
+
+    .about-img {
+        padding: 15px 0;
+
+        img {
+            display: block;
+            margin: auto;
+        }
+    }
+
+}
+
+/*----------------------------------*/
+/*         Package Section
+/*----------------------------------*/
+#package {
+    z-index: -1;
+    padding: 100px 0;
+    background-image: url('../images/promotions_area_bg_1.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+    // background-attachment: fixed;
+    width: 100%;
+
+    &::after {
+        content: '';
+        background: #000000 url('../images/pattarn.png');
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+        opacity: 0.8;
+        z-index: -1;
+    }
+}
+
+.promotion {
+    
+    .header-txt {
+        @extend %header-section;
+        margin-bottom: 80px;
+        
+    }
+    button:focus {
+        outline: none; 
+        outline: none; 
+    }
+    .owl-theme .owl-dots .owl-dot span {
+        width: 12px;
+        height: 12px;
+        margin: 5px 7px;
+        display: block;
+        transition: opacity 200ms ease;
+        border-radius: 0px;
+        
+    }
+    .owl-theme .owl-nav.disabled + .owl-dots {
+        margin-top: 25px;
+    }
+    .owl-theme .owl-dots .owl-dot.active span, .owl-theme .owl-dots .owl-dot:hover span {
+        background: #ca3d26;
+    }
+    .promotion-section{
+        position: relative;
+        .package-detail {
+            width: 100%;
+                max-height: 500px;
+            img {
+                width: 75%;
+                @media (max-width:576px){
+                    width: 100%;
+                }
+            }
+        }
+        .offer-card{
+            padding: 50px;
+            background: #ffffff;
+            position: absolute;
+            width: 40%;
+            top: 18%;
+            right: 15px;
+            @media (max-width:576px){
+                padding: 25px;
+            } 
+            h3{
+                color: #333;
+                font-size: 32px;   
+                @media (max-width:576px){
+                    font-size: 20px; 
+                }         
+            }
+            p{
+                font-size: 18px;
+                @media (max-width:576px){
+                    font-size: 15px; 
+                }
+            }
+            a{
+                padding: 8px 25px;
+                margin-top: 10px;
+                font-weight: bold;
+                border: 1px solid #ca3d26;
+                color: #ca3d26;
+                text-decoration: none;
+                display: inline-block;
+                letter-spacing: 1px;
+                transition: 0.5s;
+                &:hover{
+                    background-color: #ca3d26;
+                    color: #ffffff;
+                }
+            }
+            @media (max-width:576px){
+                position: static;
+                width: 100%;
+            }
+
+        }
+    }
+    
 }
