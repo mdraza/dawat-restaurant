@@ -464,35 +464,24 @@ a:hover {
 /*----------------------------------*/
 /*         About Us Section
 /*----------------------------------*/
-#about .header-txt h2, .promotion .header-txt h2 {
+#about .header-txt h2, .promotion .header-txt h2, #menu .header-txt h2, #team .header-txt h2 {
   text-align: center;
   font-family: "Dancing Script", cursive;
   font-size: 70px;
   color: #ca3d26;
+  margin-bottom: 5px;
 }
 
 @media (max-width: 576px) {
-  #about .header-txt h2, .promotion .header-txt h2 {
+  #about .header-txt h2, .promotion .header-txt h2, #menu .header-txt h2, #team .header-txt h2 {
     font-size: 50px;
     margin-bottom: 0;
   }
 }
 
-#about .header-txt h2::after, .promotion .header-txt h2::after {
-  background: rgba(0, 0, 0, 0) url(../images/red.png) no-repeat scroll center/contain;
-  width: 100%;
-  height: 30px;
-  content: "";
-  position: absolute;
-  top: 175px;
-  left: 0;
-}
-
-@media (max-width: 576px) {
-  #about .header-txt h2::after, .promotion .header-txt h2::after {
-    height: 25px;
-    top: 155px;
-  }
+#about .header-txt img, .promotion .header-txt img, #menu .header-txt img, #team .header-txt img {
+  display: block;
+  margin: auto;
 }
 
 #about {
@@ -604,7 +593,8 @@ a:hover {
   margin-top: 25px;
 }
 
-.promotion .owl-theme .owl-dots .owl-dot.active span, .promotion .owl-theme .owl-dots .owl-dot:hover span {
+.promotion .owl-theme .owl-dots .owl-dot.active span,
+.promotion .owl-theme .owl-dots .owl-dot:hover span {
   background: #ca3d26;
 }
 
@@ -686,5 +676,231 @@ a:hover {
     position: static;
     width: 100%;
   }
+}
+
+/*----------------------------------*/
+/*         Menu Section
+/*----------------------------------*/
+#menu {
+  padding: 90px 0 100px;
+  position: relative;
+}
+
+#menu::after {
+  content: '';
+  background-image: url("../images/tri-promo-bottom-white.png");
+  background-repeat: repeat;
+  position: absolute;
+  top: -7px;
+  left: 0;
+  height: 7px;
+  width: 100%;
+  -webkit-transform: rotate(180deg);
+          transform: rotate(180deg);
+}
+
+#menu::before {
+  content: '';
+  background-image: url("../images/tri-promo-bottom-white.png");
+  background-repeat: repeat;
+  position: absolute;
+  bottom: -7px;
+  left: 0;
+  height: 7px;
+  width: 100%;
+}
+
+#menu .filter-btn {
+  margin: 50px auto;
+}
+
+#menu .filter-btn .active_wrk {
+  background-color: #ca3d26;
+  color: #ffffff;
+  border: 1px solid #ca3d26;
+}
+
+#menu .filter-btn a {
+  display: inline-block;
+  padding: 7px 16px;
+  color: black;
+  text-decoration: none;
+  border: 1px solid #000000;
+  font-weight: bold;
+  margin: 0 2px;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+}
+
+#menu .filter-btn a:hover {
+  background-color: #ca3d26;
+  color: #ffffff;
+  border: 1px solid #ca3d26;
+}
+
+#menu .filter-btn a.active {
+  color: green !important;
+}
+
+@media (max-width: 576px) {
+  #menu .items-detail .filtr-container .row1 {
+    margin-right: -10px;
+    margin-left: 0px;
+  }
+}
+
+@media (max-width: 576px) {
+  #menu .items-detail .filtr-container .row2 {
+    margin-left: 8px !important;
+  }
+}
+
+@media (max-width: 576px) {
+  #menu .items-detail .filtr-container .row3 {
+    margin-left: 15px !important;
+  }
+}
+
+#menu .items-detail .menu-item {
+  padding: 40px 0;
+  border-bottom: 1px solid #e2e2e2;
+}
+
+#menu .items-detail .item-img img {
+  width: 100%;
+  border: 8px solid rgba(0, 0, 0, 0.075);
+}
+
+#menu .items-detail .item-name {
+  font-family: "PT Sans Narrow", sans-serif;
+}
+
+@media (max-width: 576px) {
+  #menu .items-detail .item-name h3, #menu .items-detail .item-name h3 span {
+    font-size: 20px !important;
+    margin-top: 10px;
+    padding: 0 5px;
+  }
+}
+
+#menu .items-detail .item-name h3 {
+  font-size: 22px;
+  color: #000000;
+  font-weight: bold;
+}
+
+#menu .items-detail .item-name h3 span {
+  color: #ca3d26;
+  font-size: 22px;
+  float: right;
+}
+
+#menu .items-detail .item-name p {
+  font-size: 19px;
+  color: #000000;
+  margin-bottom: 6px;
+}
+
+@media (max-width: 576px) {
+  #menu .items-detail .item-name p {
+    font-size: 17px;
+  }
+}
+
+#menu .items-detail .item-name p span {
+  display: inline-block;
+  width: 32%;
+}
+
+/*----------------------------------*/
+/*         Book Now Section
+/*----------------------------------*/
+#book-now {
+  padding: 100px 0;
+  background-image: url("../images/promo_slide_1.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  position: relative;
+  z-index: -1;
+}
+
+#book-now::after {
+  content: '';
+  position: absolute;
+  background: url("../images/pattarn.png");
+  width: 100%;
+  height: 100%;
+  top: 0;
+  background-color: #000;
+  opacity: 0.8;
+  z-index: -1;
+}
+
+#book-now::before {
+  content: '';
+  position: absolute;
+  bottom: -1px;
+  left: 0;
+  background: url("../images/tri-promo-bottom-white.png");
+  width: 100%;
+  height: 7px;
+  -webkit-transform: rotate(180deg);
+          transform: rotate(180deg);
+}
+
+#book-now .book-txt {
+  padding: 65px;
+  color: #ffffff;
+  text-align: center;
+}
+
+#book-now .book-txt h2 {
+  font-size: 55px;
+  letter-spacing: 5px;
+}
+
+#book-now .book-txt a {
+  display: inline-block;
+  padding: 10px 45px;
+  background: #ffffff;
+  color: #ca3d26;
+  text-decoration: none;
+  letter-spacing: 3px;
+  font-weight: bold;
+  margin-top: 20px;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+}
+
+#book-now .book-txt a:hover {
+  background-color: #ca3d26;
+  color: #fff;
+}
+
+/*----------------------------------*/
+/*         Our Team Section
+/*----------------------------------*/
+#team {
+  padding: 90px 0 100px;
+}
+
+#team .team-detail .team-img img {
+  width: 100%;
+}
+
+#team .team-txt {
+  margin-top: 30px;
+  text-align: center;
+}
+
+#team .team-txt h3 {
+  font-size: 23px;
+}
+
+#team .team-txt p {
+  font-size: 16px;
+  width: 80%;
+  margin: auto;
 }
 /*# sourceMappingURL=style.css.map */

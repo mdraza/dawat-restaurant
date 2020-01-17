@@ -443,28 +443,20 @@ a:hover {
         font-family: "Dancing Script", cursive;
         font-size: 70px;
         color: #ca3d26;
+        margin-bottom: 5px;
 
         @media (max-width: 576px) {
             font-size: 50px;
             margin-bottom: 0;
         }
+    }
 
-        &::after {
-            background: rgba(0, 0, 0, 0) url(../images/red.png) no-repeat scroll center / contain;
-            width: 100%;
-            height: 30px;
-            content: "";
-            position: absolute;
-            top: 175px;
-            left: 0;
-
-            @media (max-width: 576px) {
-                height: 25px;
-                top: 155px;
-            }
-        }
+    img {
+        display: block;
+        margin: auto;
     }
 }
+
 #about {
     padding: 90px 0;
     background: rgba(0, 0, 0, 0) url(../images/home_three_about_bg.png) no-repeat scroll center bottom / contain;
@@ -483,6 +475,7 @@ a:hover {
         transform: rotateX(180deg);
 
     }
+
     &::after {
         background: url(../images/tri-promo-bottom-white.png) repeat scroll 0 0;
         bottom: -6px;
@@ -559,16 +552,18 @@ a:hover {
 }
 
 .promotion {
-    
+
     .header-txt {
         @extend %header-section;
         margin-bottom: 80px;
-        
+
     }
+
     button:focus {
-        outline: none; 
-        outline: none; 
+        outline: none;
+        outline: none;
     }
+
     .owl-theme .owl-dots .owl-dot span {
         width: 12px;
         height: 12px;
@@ -576,50 +571,64 @@ a:hover {
         display: block;
         transition: opacity 200ms ease;
         border-radius: 0px;
-        
+
     }
-    .owl-theme .owl-nav.disabled + .owl-dots {
+
+    .owl-theme .owl-nav.disabled+.owl-dots {
         margin-top: 25px;
     }
-    .owl-theme .owl-dots .owl-dot.active span, .owl-theme .owl-dots .owl-dot:hover span {
+
+    .owl-theme .owl-dots .owl-dot.active span,
+    .owl-theme .owl-dots .owl-dot:hover span {
         background: #ca3d26;
     }
-    .promotion-section{
+
+    .promotion-section {
         position: relative;
+
         .package-detail {
             width: 100%;
-                max-height: 500px;
+            max-height: 500px;
+
             img {
                 width: 75%;
-                @media (max-width:576px){
+
+                @media (max-width:576px) {
                     width: 100%;
                 }
             }
         }
-        .offer-card{
+
+        .offer-card {
             padding: 50px;
             background: #ffffff;
             position: absolute;
             width: 40%;
             top: 18%;
             right: 15px;
-            @media (max-width:576px){
+
+            @media (max-width:576px) {
                 padding: 25px;
-            } 
-            h3{
-                color: #333;
-                font-size: 32px;   
-                @media (max-width:576px){
-                    font-size: 20px; 
-                }         
             }
-            p{
-                font-size: 18px;
-                @media (max-width:576px){
-                    font-size: 15px; 
+
+            h3 {
+                color: #333;
+                font-size: 32px;
+
+                @media (max-width:576px) {
+                    font-size: 20px;
                 }
             }
-            a{
+
+            p {
+                font-size: 18px;
+
+                @media (max-width:576px) {
+                    font-size: 15px;
+                }
+            }
+
+            a {
                 padding: 8px 25px;
                 margin-top: 10px;
                 font-weight: bold;
@@ -629,17 +638,253 @@ a:hover {
                 display: inline-block;
                 letter-spacing: 1px;
                 transition: 0.5s;
-                &:hover{
+
+                &:hover {
                     background-color: #ca3d26;
                     color: #ffffff;
                 }
             }
-            @media (max-width:576px){
+
+            @media (max-width:576px) {
                 position: static;
                 width: 100%;
             }
 
         }
     }
-    
+
+}
+
+/*----------------------------------*/
+/*         Menu Section
+/*----------------------------------*/
+#menu {
+    padding: 90px 0 100px;
+    position: relative;
+
+    .header-txt {
+        @extend %header-section;
+    }
+
+    &::after {
+        content: '';
+        background-image: url('../images/tri-promo-bottom-white.png');
+        background-repeat: repeat;
+        position: absolute;
+        top: -7px;
+        left: 0;
+        height: 7px;
+        width: 100%;
+        transform: rotate(180deg);
+    }
+    &::before {
+        content: '';
+        background-image: url('../images/tri-promo-bottom-white.png');
+        background-repeat: repeat;
+        position: absolute;
+        bottom: -7px;
+        left: 0;
+        height: 7px;
+        width: 100%;
+    }
+
+    .filter-btn {
+        margin: 50px auto;
+
+        .active_wrk {
+            background-color: #ca3d26;
+            color: #ffffff;
+            border: 1px solid #ca3d26;
+        }
+
+        a {
+            display: inline-block;
+            padding: 7px 16px;
+            color: rgb(0, 0, 0);
+            text-decoration: none;
+            border: 1px solid #000000;
+            font-weight: bold;
+            margin: 0 2px;
+            transition: 0.4s;
+
+            &:hover {
+                background-color: #ca3d26;
+                color: #ffffff;
+                border: 1px solid #ca3d26;
+            }
+
+            &.active {
+                color: green !important;
+            }
+        }
+    }
+
+    .items-detail {
+        .filtr-container {
+            .row1 {
+                @media (max-width:576px) {
+                    margin-right: -10px;
+                    margin-left: 0px;
+                }
+            }
+
+            .row2 {
+                @media (max-width:576px) {
+                    margin-left: 8px !important;
+                }
+            }
+
+            .row3 {
+                @media (max-width:576px) {
+                    margin-left: 15px !important;
+                }
+            }
+        }
+
+
+        .menu-item {
+            padding: 40px 0;
+            border-bottom: 1px solid rgb(226, 226, 226);
+        }
+
+        .item-img {
+            img {
+                width: 100%;
+                border: 8px solid rgba(0, 0, 0, .075);
+            }
+        }
+
+        .item-name {
+            font-family: "PT Sans Narrow", sans-serif;
+
+            %med {
+                @media (max-width:576px) {
+                    font-size: 20px !important;
+                    margin-top: 10px;
+                    padding: 0 5px;
+                }
+            }
+
+            h3 {
+                font-size: 22px;
+                color: #000000;
+                font-weight: bold;
+                @extend %med;
+
+
+                span {
+                    color: #ca3d26;
+                    font-size: 22px;
+                    float: right;
+                    @extend %med;
+                }
+            }
+
+            p {
+                font-size: 19px;
+                color: #000000;
+                margin-bottom: 6px;
+
+                @media (max-width:576px) {
+                    font-size: 17px;
+                    ;
+                }
+
+                span {
+                    display: inline-block;
+                    width: 32%;
+                }
+            }
+        }
+    }
+}
+
+/*----------------------------------*/
+/*         Book Now Section
+/*----------------------------------*/
+#book-now {
+    padding: 100px 0;
+    background-image: url('../images/promo_slide_1.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    position: relative;
+    z-index: -1;
+
+    &::after {
+        content: '';
+        position: absolute;
+        background: url('../images/pattarn.png');
+        width: 100%;
+        height: 100%;
+        top: 0;
+        background-color: #000;
+        opacity: 0.8;
+        z-index: -1;
+    }
+    &::before {
+        content: '';
+        position: absolute;
+        bottom: -1px;
+        left: 0;
+        background: url('../images/tri-promo-bottom-white.png');
+        width: 100%;
+        height: 7px;
+        transform: rotate(180deg);
+    }
+
+    .book-txt {
+        padding: 65px;
+        color: #ffffff;
+        text-align: center;
+
+        h2 {
+            font-size: 55px;
+            letter-spacing: 5px;
+        }
+
+        a {
+            display: inline-block;
+            padding: 10px 45px;
+            background: #ffffff;
+            color: #ca3d26;
+            text-decoration: none;
+            letter-spacing: 3px;
+            font-weight: bold;
+            margin-top: 20px;
+            transition: 0.4s;
+            &:hover{
+                background-color: #ca3d26;
+                color: #fff;
+            }
+        }
+    }
+}
+/*----------------------------------*/
+/*         Our Team Section
+/*----------------------------------*/
+#team{
+    padding: 90px 0 100px;
+    .header-txt{
+        @extend %header-section;
+    }
+    .team-detail{
+        .team-img{
+            img{
+                width: 100%;
+            }
+        }
+    }
+    .team-txt{
+        margin-top: 30px;
+        text-align: center;
+        h3{
+            font-size: 23px;
+        }
+        p{
+            font-size: 16px;
+            width: 80%;
+            margin: auto;
+        }
+    }
 }
