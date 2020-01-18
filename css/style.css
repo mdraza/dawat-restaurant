@@ -600,6 +600,7 @@ a:hover {
 
 .promotion .promotion-section {
   position: relative;
+  cursor: e-resize;
 }
 
 .promotion .promotion-section .package-detail {
@@ -987,7 +988,7 @@ a:hover {
 }
 
 #team .team-txt h3 {
-  font-size: 23px;
+  font-size: 21px;
 }
 
 #team .team-txt p {
@@ -1025,6 +1026,7 @@ a:hover {
 
 #latest-news .blog-content .item {
   margin: 0 3px;
+  cursor: e-resize;
 }
 
 #latest-news .blog-content .item:hover .card-title {
