@@ -35,7 +35,8 @@ body {
     letter-spacing: 0.3px;
     line-height: 1.7em;
 }
-
+$primary-color: #ca3d26;
+// $primary-color: #8bc34a;
 a:hover {
     text-decoration: none
 }
@@ -118,8 +119,8 @@ a:hover {
         margin-left: 19px;
         padding: 6px 25px;
         border-radius: 0;
-        background-color: #ca3d26;
-        border: 1px solid #ca3d26;
+        background-color: $primary-color;
+        border: 1px solid $primary-color;
     }
 }
 
@@ -144,11 +145,11 @@ a:hover {
 
     &:hover {
         text-decoration: none;
-        color: #ca3d26;
+        color: $primary-color;
     }
 
     &.active {
-        color: #ca3d26;
+        color: $primary-color;
     }
 
     @media (max-width:991px) {
@@ -301,7 +302,7 @@ a:hover {
         }
 
         .fa {
-            background-color: #ca3d26;
+            background-color: $primary-color;
             padding: 15px;
 
             @media (max-width:576px) {
@@ -412,8 +413,8 @@ a:hover {
                     transition: 0.5s;
 
                     &:hover {
-                        background-color: #ca3d26;
-                        border: 1px solid #ca3d26;
+                        background-color: $primary-color;
+                        border: 1px solid $primary-color;
                     }
 
                     @media (max-width:576px) {
@@ -442,7 +443,7 @@ a:hover {
         text-align: center;
         font-family: "Dancing Script", cursive;
         font-size: 70px;
-        color: #ca3d26;
+        color: $primary-color;
         margin-bottom: 5px;
 
         @media (max-width: 576px) {
@@ -580,7 +581,7 @@ a:hover {
 
     .owl-theme .owl-dots .owl-dot.active span,
     .owl-theme .owl-dots .owl-dot:hover span {
-        background: #ca3d26;
+        background: $primary-color;
     }
 
     .promotion-section {
@@ -604,11 +605,14 @@ a:hover {
             background: #ffffff;
             position: absolute;
             width: 40%;
-            top: 18%;
-            right: 15px;
-
+            top: 19%;
+            right: 0%;
             @media (max-width:576px) {
                 padding: 25px;
+            }
+
+            @media (min-width:576px) and (max-width:991px) {
+                top: 0%;
             }
 
             h3 {
@@ -632,15 +636,15 @@ a:hover {
                 padding: 8px 25px;
                 margin-top: 10px;
                 font-weight: bold;
-                border: 1px solid #ca3d26;
-                color: #ca3d26;
+                border: 1px solid $primary-color;
+                color: $primary-color;
                 text-decoration: none;
                 display: inline-block;
                 letter-spacing: 1px;
                 transition: 0.5s;
 
                 &:hover {
-                    background-color: #ca3d26;
+                    background-color: $primary-color;
                     color: #ffffff;
                 }
             }
@@ -677,6 +681,7 @@ a:hover {
         width: 100%;
         transform: rotate(180deg);
     }
+
     &::before {
         content: '';
         background-image: url('../images/tri-promo-bottom-white.png');
@@ -692,9 +697,9 @@ a:hover {
         margin: 50px auto;
 
         .active_wrk {
-            background-color: #ca3d26;
+            background-color: $primary-color;
             color: #ffffff;
-            border: 1px solid #ca3d26;
+            border: 1px solid $primary-color;
         }
 
         a {
@@ -708,9 +713,9 @@ a:hover {
             transition: 0.4s;
 
             &:hover {
-                background-color: #ca3d26;
+                background-color: $primary-color;
                 color: #ffffff;
-                border: 1px solid #ca3d26;
+                border: 1px solid $primary-color;
             }
 
             &.active {
@@ -773,7 +778,7 @@ a:hover {
 
 
                 span {
-                    color: #ca3d26;
+                    color: $primary-color;
                     font-size: 22px;
                     float: right;
                     @extend %med;
@@ -804,7 +809,7 @@ a:hover {
 /*----------------------------------*/
 #book-now {
     padding: 100px 0;
-    background-image: url('../images/promo_slide_1.jpg');
+    background-image: url('../images/promo_slide_3.jpg');
     background-repeat: no-repeat;
     background-size: cover;
     background-attachment: fixed;
@@ -822,6 +827,7 @@ a:hover {
         opacity: 0.8;
         z-index: -1;
     }
+
     &::before {
         content: '';
         position: absolute;
@@ -837,54 +843,226 @@ a:hover {
         padding: 65px;
         color: #ffffff;
         text-align: center;
+        @media (max-width:576px) {
+            padding: 0;
+        }
 
         h2 {
             font-size: 55px;
             letter-spacing: 5px;
+            @media (max-width:576px) {
+                font-size: 25px;
+            }
         }
 
         a {
             display: inline-block;
             padding: 10px 45px;
             background: #ffffff;
-            color: #ca3d26;
+            color: $primary-color;
             text-decoration: none;
             letter-spacing: 3px;
             font-weight: bold;
             margin-top: 20px;
             transition: 0.4s;
-            &:hover{
-                background-color: #ca3d26;
+
+            &:hover {
+                background-color: $primary-color;
                 color: #fff;
             }
         }
     }
 }
+
 /*----------------------------------*/
 /*         Our Team Section
 /*----------------------------------*/
-#team{
+#team {
     padding: 90px 0 100px;
-    .header-txt{
+
+    .header-txt {
         @extend %header-section;
     }
-    .team-detail{
-        .team-img{
-            img{
+
+    .team-detail {
+        .team-img {
+            position: relative;
+            transition: 0.5s;
+
+            img {
                 width: 100%;
             }
+
+            &::after {
+                background: #000 none repeat scroll 0 0;
+                content: "";
+                height: 100%;
+                left: 0;
+                opacity: 0;
+                position: absolute;
+                top: 0;
+                -webkit-transition: all 0.3s ease 0s;
+                transition: all 0.3s ease 0s;
+                width: 100%;
+            }
+            .social-icons{
+                position: absolute;
+                top: 8%;
+                right: -25%;
+                z-index: 9;
+                transition: 0.3s;
+                transform: scale(0);
+                ul{
+                    list-style-type: none;
+                    li{
+                        a{
+                            text-decoration: none;
+                            display: inline-block;
+                            padding: 15px 10px;
+                            z-index: 999;
+                            .fab{
+                                font-size: 17px;
+                                color: #ffffff;
+                                transition: 0.4s;
+                                &:hover{
+                                    color: $primary-color;
+                                }
+                            }
+                            
+                        }
+                    }
+                }
+            }
+        }
+        
+
+        &:hover {
+            .team-img {
+                &::after {
+                    background: #000 none repeat scroll 0 0;
+                    content: "";
+                    height: 100%;
+                    left: 0;
+                    opacity: 0.5;
+                    position: absolute;
+                    top: 0;
+                    -webkit-transition: all 0.3s ease 0s;
+                    transition: all 0.3s ease 0s;
+                    width: 100%;
+                }
+            }
+            .social-icons{
+                position: absolute;
+                top: 13%;
+                right: 5%;
+                z-index: 9;
+                transform: scale(1.2, 1.2);
+            }
+
         }
     }
-    .team-txt{
+
+    .team-txt {
         margin-top: 30px;
         text-align: center;
-        h3{
+
+        h3 {
             font-size: 23px;
         }
-        p{
+
+        p {
             font-size: 16px;
-            width: 80%;
+            width: 90%;
             margin: auto;
         }
     }
 }
+/*----------------------------------*/
+/*         Latest News
+/*----------------------------------*/
+#latest-news{
+    padding: 90px 0 100px;
+    background: url(../images/promotions_area_bg_3.jpg) no-repeat center scroll;
+    background-size: cover;
+    position: relative;
+    z-index: -1;
+    &::after{
+        content: '';
+        background: #000 url(../images/pattarn.png);
+        opacity: 0.7;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        z-index: -1;
+    }
+    .header-txt{
+        @extend %header-section;
+        margin-bottom: 60px;
+    }
+    .blog-content{
+        .item{
+            margin: 0 3px;
+            &:hover{
+                .card-title{
+                    color: $primary-color;
+                }
+            }
+        }
+        .card{
+            border: none;
+            border-radius: 0;
+            
+            .card-body{
+                margin-top: 10px;
+                text-align: center;
+                .card-title{
+                    font-weight: 500;
+                    color: #000000;
+                    font-size: 28px;
+                    margin: 10px 0 15px;
+                    
+                }
+                .dt{
+                    margin-top: 30px;
+                    span{
+                        width: 45%;
+                        display: inline-block;
+                        font-size: 17px;
+                        color: #333333;
+                        cursor: pointer;
+                        transition: 0.4s;
+                        &:hover{
+                            color: $primary-color;
+                        }
+                        @media (max-width: 576px) {
+                            width: 100%;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+/*----------------------------------*/
+/*         Gallery Section
+/*----------------------------------*/
+#gallery{
+    padding: 90px 0;
+    .header-txt{
+        @extend %header-section;
+    }
+    .img-gallery{
+        margin-top: 50px;
+        .img-container{
+            margin-top: 10px;
+            .img-thumbnail{
+                border-radius: 0;
+            }
+        }
+    }
+}
+/*----------------------------------*/
+/*         Footer Section
+/*----------------------------------*/

@@ -17,20 +17,20 @@ $(document).ready(function () {
 new WOW().init();
 
 /******* Owl Carousel *******/
-$('.owl-carousel').owlCarousel({
-    loop:true,
-    margin:10,
-    nav:false,
-    dots:true,
-    responsive:{
-        0:{
-            items:1
+$('.owl-carouselOne').owlCarousel({
+    loop: true,
+    margin: 10,
+    nav: false,
+    dots: true,
+    responsive: {
+        0: {
+            items: 1
         },
-        600:{
-            items:1
+        600: {
+            items: 1
         },
-        1000:{
-            items:1
+        1000: {
+            items: 1
         }
     }
 });
@@ -55,6 +55,8 @@ $('.owl-carouselTwo').owlCarousel({
     margin: 10,
     nav: false,
     dots: true,
+    autoplay: true,
+    autoplayTimeout: 2000,
     responsive: {
         0: {
             items: 1
@@ -67,3 +69,36 @@ $('.owl-carouselTwo').owlCarousel({
         }
     }
 })
+/********* Latest News Section ********/
+$('.owl-carouselThree').owlCarousel({
+    loop: true,
+    margin: 10,
+    nav: false,
+    dots: false,
+    autoplay: true,
+    autoplayTimeout: 2500,
+    responsive: {
+        0: {
+            items: 1
+        },
+        600: {
+            items: 2
+        },
+        1000: {
+            items: 3
+        }
+    }
+});
+
+/********* Gallery Magnific Pop ********/
+$('.view-image').magnificPopup({
+    type: 'image',
+    gallery: {
+        enabled: true
+    },
+    zoom: {
+        enabled: true,
+        duration: 300,
+        easing: 'ease-in-out',
+    },
+});
