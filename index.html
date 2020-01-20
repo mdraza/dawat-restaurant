@@ -5,9 +5,8 @@
     <title>Dawat Restaurant</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-
+    <link rel="shoutcut icon" type="image/png" href="images/favicon.png">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.css">
     <link rel="stylesheet" href="css/animate.css">
     <link rel="stylesheet" href="css/owl.carousel.css">
@@ -16,27 +15,109 @@
     <link rel="stylesheet" href="css/style.css">
 </head>
 
-<body>
+<body data-spy="scroll" data-target=".nav-scroll" data-offset="50">
+    <span id="home"></span>
+    <!-- Preloader -->
+    <div id="preloader">
+        <div class="pre-container">
+            <div class="spinner">
+                <div class="double-bounce1"></div>
+                <div class="double-bounce2"></div>
+            </div>
+        </div>
+    </div>
+    <!-- End Preloader -->
     <!-- Start Header Section -->
     <header class="navigation">
-        <div class="logo">
-            <!-- <img src="images/main_logo.png" alt="" srcset=""> -->
-        </div>
+        <div class="logo"></div>
         <nav>
             <ul>
-                <li><a href="javascript:void" class="active">HOME</a></li>
-                <li><a href="javascript:void">ABOUT US</a></li>
-                <li><a href="javascript:void">OFFER</a></li>
-                <li><a href="javascript:void">MENU</a></li>
-                <li><a href="javascript:void">TEAM</a></li>
-                <li><a href="javascript:void">GALLERY</a></li>
-                <li><a href="javascript:void">CONTACT</a></li>
-                <a href="javascript:void" class="btn">BOOK A TABLE</a>
+                <li><a href="#home" class="active">HOME</a></li>
+                <li><a href="#about">ABOUT US</a></li>
+                <li><a href="#package">OFFER</a></li>
+                <li><a href="#menu">MENU</a></li>
+                <li><a href="#team">TEAM</a></li>
+                <li><a href="#latest-news">BLOG</a></li>
+                <li><a href="#gallery">GALLERY</a></li>
+                <li><a href="#footer">CONTACT</a></li>
+                <a href="javascript:void" class="btn" data-toggle="modal" data-target="#myModal">BOOK A TABLE</a>
             </ul>
         </nav>
         <div class="menu-toggle"><i class="fas fa-bars"></i></div>
     </header>
     <!-- Ene Header Section -->
+    <!-- Start Book a Table Section -->
+
+    <div class="modal fade" id="myModal">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+
+                <!-- Modal Header -->
+                <div class="modal-header">
+                    <p class="modal-title">TABLE BOOKING RESERVATION FORM</p>
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                </div>
+
+                <!-- Modal body -->
+                <div class="modal-body">
+                    <form action="/action_page.php">
+                        <div class="row">
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <label for="pwd">Enter Full Name</label>
+                                    <input type="text" class="form-control"  id="name">
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <label for="pwd">Enter Email ID</label>
+                                    <input type="email" class="form-control"  id="email">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <label for="pwd">Enter Mobile No.</label>
+                                    <input type="text" class="form-control"  id="mobile">
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <label for="pwd">Enter Date</label>
+                                    <input type="date" class="form-control"  id="date">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <label for="pwd">Enter Time</label>
+                                    <input type="time" class="form-control"  id="time">
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <label for="pwd">Enter No of Person</label>
+                                    <select class="form-control" id="person">
+                                      <option selected>1 Person</option>
+                                      <option>2</option>
+                                      <option>3</option>
+                                      <option>4</option>
+                                    </select>
+                                  </div>
+                            </div>
+                        </div>
+
+                        
+                        <button type="submit" class="btn btn-primary btn-block">BOOK A TABLE</button>
+                    </form>
+                </div>
+
+            </div>
+        </div>
+    </div>
+    <!-- Start Book a Table Section -->
 
     <!-- Start Slider Section -->
     <div class="slider">
@@ -186,7 +267,7 @@
         </div>
         <div class="container-fluid text-center">
             <div class="row">
-                <div class="offset-lg-3 col-lg-6">
+                <div class="offset-lg-2 col-lg-8">
                     <div class="filter-btn" id="workFilter">
                         <a href="javascript:void" data-filter="all" class="wrk active_wrk">ALL</a>
                         <a href="javascript:void" data-filter="1" class="wrk">BREAKFAST</a>
@@ -485,7 +566,7 @@
                                 <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit.
                                     Voluptatibus labore ullam iste
                                     alias, enim magni delectus explicabo facilis. Consequuntur, ullam.</p>
-                                <p class="dt"><span>21 December 2019 </span> <span> 10 Comments</span></p>
+                                <p class="dt"><span>5 January 2020 </span> <span> 12 Comments</span></p>
                             </div>
                         </div>
                     </div>
@@ -497,7 +578,7 @@
                                 <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit.
                                     Voluptatibus labore ullam iste
                                     alias, enim magni delectus explicabo facilis. Consequuntur, ullam.</p>
-                                <p class="dt"><span>21 December 2019 </span> <span> 10 Comments</span></p>
+                                <p class="dt"><span>7 January 2020 </span> <span> 8 Comments</span></p>
                             </div>
                         </div>
                     </div>
@@ -510,83 +591,124 @@
     </section>
     <!-- Start Latest News Section -->
     <!-- Start Gallery Section -->
-        <section id="gallery">
-            <div class="header-txt">
-                <h2>Gallery</h2>
-                <img src="images/red.png" alt="">
-            </div>
-            <div class="img-gallery">
-                <div class="container-fluid">
-                    <div class="row">
-                        <div class="col-lg-3 col-md-6">
-                            <div class="img-container">
-                                <a class="view-image" href="images/gallery-img1.jpg"><img src="images/gallery-img1.jpg" alt="Gallery Image" class="img-thumbnail"></a>
-                            </div>
-                        </div>
-                        <div class="col-lg-3 col-md-6">
-                            <div class="img-container">
-                                <a class="view-image" href="images/gallery-img2.jpg"><img src="images/gallery-img2.jpg" alt="Gallery Image" class="img-thumbnail"></a>
-                            </div>
-                        </div>
-                        <div class="col-lg-3 col-md-6">
-                            <div class="img-container">
-                                <a class="view-image" href="images/gallery-img3.jpg"><img src="images/gallery-img3.jpg" alt="Gallery Image" class="img-thumbnail"></a>
-                            </div>
-                        </div>
-                        <div class="col-lg-3 col-md-6">
-                            <div class="img-container">
-                                <a class="view-image" href="images/gallery-img4.jpg"><img src="images/gallery-img4.jpg" alt="Gallery Image" class="img-thumbnail"></a>
-                            </div>
+    <section id="gallery">
+        <div class="header-txt">
+            <h2>Gallery</h2>
+            <img src="images/red.png" alt="">
+        </div>
+        <div class="img-gallery">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-lg-3 col-md-6">
+                        <div class="img-container">
+                            <a class="view-image" href="images/gallery-img1.jpg"><img src="images/gallery-img1.jpg"
+                                    alt="Gallery Image" class="img-thumbnail"></a>
                         </div>
                     </div>
-                    
-                    <div class="row mt-3">
-                        <div class="col-lg-3 col-md-6">
-                            <div class="img-container">
-                                <a class="view-image" href="images/gallery-img5.jpg"><img src="images/gallery-img5.jpg" alt="Gallery Image" class="img-thumbnail"></a>
-                            </div>
+                    <div class="col-lg-3 col-md-6">
+                        <div class="img-container">
+                            <a class="view-image" href="images/gallery-img2.jpg"><img src="images/gallery-img2.jpg"
+                                    alt="Gallery Image" class="img-thumbnail"></a>
                         </div>
-                        <div class="col-lg-3 col-md-6">
-                            <div class="img-container">
-                                <a class="view-image" href="images/gallery-img6.jpg"><img src="images/gallery-img6.jpg" alt="Gallery Image" class="img-thumbnail"></a>
-                            </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6">
+                        <div class="img-container">
+                            <a class="view-image" href="images/gallery-img3.jpg"><img src="images/gallery-img3.jpg"
+                                    alt="Gallery Image" class="img-thumbnail"></a>
                         </div>
-                        <div class="col-lg-3 col-md-6">
-                            <div class="img-container">
-                                <a class="view-image" href="images/gallery-img7.jpg"><img src="images/gallery-img7.jpg" alt="Gallery Image" class="img-thumbnail"></a>
-                            </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6">
+                        <div class="img-container">
+                            <a class="view-image" href="images/gallery-img4.jpg"><img src="images/gallery-img4.jpg"
+                                    alt="Gallery Image" class="img-thumbnail"></a>
                         </div>
-                        <div class="col-lg-3 col-md-6">
-                            <div class="img-container">
-                                <a class="view-image" href="images/gallery-img8.jpg"><img src="images/gallery-img8.jpg" alt="Gallery Image" class="img-thumbnail"></a>
-                            </div>
+                    </div>
+                </div>
+
+                <div class="row mt-3">
+                    <div class="col-lg-3 col-md-6">
+                        <div class="img-container">
+                            <a class="view-image" href="images/gallery-img5.jpg"><img src="images/gallery-img5.jpg"
+                                    alt="Gallery Image" class="img-thumbnail"></a>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6">
+                        <div class="img-container">
+                            <a class="view-image" href="images/gallery-img6.jpg"><img src="images/gallery-img6.jpg"
+                                    alt="Gallery Image" class="img-thumbnail"></a>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6">
+                        <div class="img-container">
+                            <a class="view-image" href="images/gallery-img7.jpg"><img src="images/gallery-img7.jpg"
+                                    alt="Gallery Image" class="img-thumbnail"></a>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6">
+                        <div class="img-container">
+                            <a class="view-image" href="images/gallery-img8.jpg"><img src="images/gallery-img8.jpg"
+                                    alt="Gallery Image" class="img-thumbnail"></a>
                         </div>
                     </div>
                 </div>
             </div>
-        </section>
+        </div>
+    </section>
     <!-- End Gallery Section -->
 
-    <!-- Start Footer Section -->    
-        <section id="footer">
-            
-        </section>
-    <!-- End Footer Section -->    
+    <!-- Start Footer Section -->
+    <section id="footer">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="offset-lg-2 col-lg-8">
+                    <div class="footer-content">
+                        <div class="footer-logo">
+                            <img src="images/main_logo.png" alt="Footer Logo">
+                        </div>
+                        <div class="footer-txt">
+                            <p>D-25 4th floor, Shaheen Bagh, Okhla, Jamia Nagar, New Delhi</p>
+                            <p>raza@dawat.com</p>
+                            <p>+91 - 8860787344</p>
+                        </div>
+                        <div class="footer-social-icons">
+                            <p>
+                                <a href="javascript:void"><i class="fab fa-facebook-f"></i> </a>
+                                <a href="javascript:void"><i class="fab fa-twitter"></i> </a>
+                                <a href="javascript:void"><i class="fab fa-linkedin-in"></i></a>
+                                <a href="javascript:void"><i class="fab fa-pinterest-p"></i> </a>
+                                <a href="javascript:void"><i class="fab fa-skype"></i></a>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="footer-bottom-txt">
+                        <div class="left-text">
+                            <ul>
+                                <li><a href="javascript:void">Terms of Use</a></li>
+                                <li><a href="javascript:void">Privacy Policy</a></li>
+                                <li><a href="javascript:void">SiteMap</a></li>
+                                <li><a href="javascript:void">Contact</a></li>
+                            </ul>
+                        </div>
+                        <div class="right-text">
+                            <p>© 2020 <a href="javascript:void"><b>Dawat Restaurant</b></a> All Right Reserved.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+    <!-- End Footer Section -->
 
 
 
 
-
-    <br><br><br><br> <br>
-
-
-
-
-
-
-
-
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+    
+    <script src="js/jquery.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
     <script src="js/wow.js"></script>
