@@ -151,7 +151,7 @@ a:hover {
 %logo {
     float: left;
     width: 20%;
-    height: 72px;
+    height: 75px;
     background-repeat: no-repeat;
 
     @media (max-width:991px) {
@@ -336,7 +336,7 @@ a:hover {
 
     .logo {
         background-image: url('../images/main_logo_black.png');
-        margin-top: 5px;
+        margin-top: 10px;
         @extend %logo;
     }
 
