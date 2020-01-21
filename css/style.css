@@ -192,17 +192,20 @@ a:hover {
 }
 
 .navigation nav ul .btn {
-  margin-top: 12px;
+  margin-top: 14px;
   color: #fff;
-  border: 1px solid;
-  height: 40px;
-  line-height: 26px;
+  height: 41px;
+  line-height: 31px;
   margin-left: 19px;
-  padding: 6px 20px;
+  padding: 3px 12px;
   font-size: 14px;
   border-radius: 0;
   background-color: #ca3d26;
   border: 1px solid #ca3d26;
+}
+
+.navigation nav ul .btn:hover {
+  color: #fff !important;
 }
 
 .navigation nav ul .btn.focus, .navigation nav ul .btn:focus {
@@ -971,7 +974,7 @@ a:hover {
 #book-now::before {
   content: '';
   position: absolute;
-  bottom: -1px;
+  bottom: 0px;
   left: 0;
   background: url("../images/tri-promo-bottom-white.png");
   width: 100%;
@@ -1160,7 +1163,7 @@ a:hover {
   background-image: url("../images/tri-promo-bottom-white.png");
   background-repeat: repeat;
   position: absolute;
-  bottom: -1px;
+  bottom: 0px;
   left: 0;
   width: 100%;
   height: 7px;
@@ -1255,7 +1258,7 @@ a:hover {
 /*----------------------------------*/
 /*         Footer Section
 /*----------------------------------*/
-#footer {
+#footer-section {
   padding: 100px 0 20px;
   background-image: url("../images/footer_bg_2.jpg");
   background-size: cover;
@@ -1265,7 +1268,7 @@ a:hover {
   z-index: -1;
 }
 
-#footer::after {
+#footer-section::after {
   content: '';
   position: absolute;
   top: 0;
@@ -1279,37 +1282,37 @@ a:hover {
   z-index: -1;
 }
 
-#footer .footer-content {
+#footer-section .footer-content {
   text-align: center;
 }
 
-#footer .footer-content .footer-logo {
+#footer-section .footer-content .footer-logo {
   width: 100%;
 }
 
-#footer .footer-content .footer-txt {
+#footer-section .footer-content .footer-txt {
   margin-top: 50px;
   font-size: 16px;
 }
 
-#footer .footer-content .footer-txt p {
+#footer-section .footer-content .footer-txt p {
   color: #fff3f1;
   letter-spacing: 1.3px;
 }
 
-#footer .footer-content .footer-txt p:nth-child(2) {
+#footer-section .footer-content .footer-txt p:nth-child(2) {
   color: #ca3d26;
 }
 
-#footer .footer-content .footer-txt p:nth-child(3) {
+#footer-section .footer-content .footer-txt p:nth-child(3) {
   color: #ca3d26;
 }
 
-#footer .footer-content .footer-social-icons {
+#footer-section .footer-content .footer-social-icons {
   margin: 50px 0 80px;
 }
 
-#footer .footer-content .footer-social-icons p .fab {
+#footer-section .footer-content .footer-social-icons p .fab {
   color: #ffffff;
   width: 9%;
   font-size: 22px;
@@ -1317,30 +1320,30 @@ a:hover {
   transition: 0.4s;
 }
 
-#footer .footer-content .footer-social-icons p .fab:hover {
+#footer-section .footer-content .footer-social-icons p .fab:hover {
   color: #ca3d26;
 }
 
-#footer .footer-bottom-txt {
+#footer-section .footer-bottom-txt {
   border-top: 1px solid #483b3b;
   padding: 40px 0;
 }
 
-#footer .footer-bottom-txt .left-text {
+#footer-section .footer-bottom-txt .left-text {
   float: left;
 }
 
-#footer .footer-bottom-txt .left-text ul {
+#footer-section .footer-bottom-txt .left-text ul {
   list-style-type: none;
   margin: 0;
   padding: 0;
 }
 
-#footer .footer-bottom-txt .left-text ul li {
+#footer-section .footer-bottom-txt .left-text ul li {
   float: left;
 }
 
-#footer .footer-bottom-txt .left-text ul li a {
+#footer-section .footer-bottom-txt .left-text ul li a {
   text-decoration: none;
   color: #fff3f1;
   -webkit-transition: 0.4s;
@@ -1349,25 +1352,25 @@ a:hover {
   letter-spacing: 1.5px;
 }
 
-#footer .footer-bottom-txt .left-text ul li a:hover {
+#footer-section .footer-bottom-txt .left-text ul li a:hover {
   color: #ca3d26;
 }
 
-#footer .footer-bottom-txt .left-text ul li:not(:first-child) a {
+#footer-section .footer-bottom-txt .left-text ul li:not(:first-child) a {
   margin-left: 20px;
 }
 
-#footer .footer-bottom-txt .right-text {
+#footer-section .footer-bottom-txt .right-text {
   float: right;
 }
 
-#footer .footer-bottom-txt .right-text p {
+#footer-section .footer-bottom-txt .right-text p {
   color: #fff3f1;
   letter-spacing: 1.5px;
   font-size: 14px;
 }
 
-#footer .footer-bottom-txt .right-text p a {
+#footer-section .footer-bottom-txt .right-text p a {
   color: #ca3d26;
   font-size: 15px;
 }
